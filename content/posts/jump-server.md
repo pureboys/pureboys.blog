@@ -1,5 +1,6 @@
 ---
 title: "一步登陆 jumpserver 跳板机 告别Google的身份验证器"
+summary: "一步登陆 jumpserver 跳板机 告别Google的身份验证器"
 date: 2020-06-22T09:37:33+08:00
 ---
 

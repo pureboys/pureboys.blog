@@ -5,3 +5,5 @@ draft: false
 ---
 
 ### Hello pureboys
+
+これは私のblogです

@@ -17,7 +17,7 @@ alias unsetproxy="unset http_proxy;unset https_proxy;unset all_proxy;echo \"Unse
 
 `clash.service`
 ```
-# edit and save this file to /usr/lib/systemd/system/clash.service
+# edit and save this file to /usr/lib/systemd/user/clash.service
 [Unit]
 Description=clash
 After=network.target
@@ -66,8 +66,8 @@ rm ${HOME}/.config/clash/clash.pid
 
 配置添加完成后，执行以下代码就可以启动Clash并设置为开机自启动。
 ```shell
-systemctl enable clash
-systemctl start clash
+systemctl --user enable clash
+systemctl --user start clash
 ```
 
 

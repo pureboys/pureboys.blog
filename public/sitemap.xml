@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://pureboys.github.io/categories/</loc>
+    <lastmod>2020-10-10T21:28:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/</loc>
+    <lastmod>2020-10-10T21:28:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/categories/tech/</loc>
+    <lastmod>2020-10-10T21:28:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/</loc>
+    <lastmod>2020-10-10T21:28:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/linux-swapfile/</loc>
+    <lastmod>2020-10-10T21:28:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/idea-uninstall/</loc>
+    <lastmod>2020-09-12T17:05:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/openwrt/</loc>
+    <lastmod>2020-09-06T19:12:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/homebrew/</loc>
+    <lastmod>2020-07-10T16:46:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/submodule/</loc>
+    <lastmod>2020-06-26T14:52:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/clash/</loc>
+    <lastmod>2020-06-26T14:19:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/docker-kafka/</loc>
+    <lastmod>2020-06-22T10:18:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/posts/jump-server/</loc>
+    <lastmod>2020-06-22T09:37:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/about/</loc>
+    <lastmod>2020-06-22T09:33:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pureboys.github.io/tags/</loc>
+  </url>
+  
+</urlset>

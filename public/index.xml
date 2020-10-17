@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ん?</title>
+    <link>https://pureboys.github.io/</link>
+    <description>Recent content on ん?</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Oct 2020 21:28:21 +0800</lastBuildDate><atom:link href="https://pureboys.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何为Linux新增swap交换空间</title>
+      <link>https://pureboys.github.io/posts/linux-swapfile/</link>
+      <pubDate>Sat, 10 Oct 2020 21:28:21 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/linux-swapfile/</guid>
+      <description>如何为Linux新增swap交换空间</description>
+    </item>
+    
+    <item>
+      <title>idea 干净卸载</title>
+      <link>https://pureboys.github.io/posts/idea-uninstall/</link>
+      <pubDate>Sat, 12 Sep 2020 17:05:54 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/idea-uninstall/</guid>
+      <description>idea 干净卸载</description>
+    </item>
+    
+    <item>
+      <title>Openwrt 命令行配置上网并安装web界面</title>
+      <link>https://pureboys.github.io/posts/openwrt/</link>
+      <pubDate>Sun, 06 Sep 2020 19:12:53 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/openwrt/</guid>
+      <description>Openwrt命令行配置上网并安装web界面</description>
+    </item>
+    
+    <item>
+      <title>更换Homebrew源</title>
+      <link>https://pureboys.github.io/posts/homebrew/</link>
+      <pubDate>Fri, 10 Jul 2020 16:46:19 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/homebrew/</guid>
+      <description>更换Homebrew源</description>
+    </item>
+    
+    <item>
+      <title>Git 子模块 Submodule 教程</title>
+      <link>https://pureboys.github.io/posts/submodule/</link>
+      <pubDate>Fri, 26 Jun 2020 14:52:28 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/submodule/</guid>
+      <description>Git 子模块 Submodule 教程</description>
+    </item>
+    
+    <item>
+      <title>Clash 相关操作</title>
+      <link>https://pureboys.github.io/posts/clash/</link>
+      <pubDate>Fri, 26 Jun 2020 14:19:29 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/clash/</guid>
+      <description>Clash 相关操作</description>
+    </item>
+    
+    <item>
+      <title>使用Docker-compose快速搭建Kafka开发环境</title>
+      <link>https://pureboys.github.io/posts/docker-kafka/</link>
+      <pubDate>Mon, 22 Jun 2020 10:18:26 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/docker-kafka/</guid>
+      <description>使用Docker-compose快速搭建Kafka开发环境</description>
+    </item>
+    
+    <item>
+      <title>一步登陆 jumpserver 跳板机 告别Google的身份验证器</title>
+      <link>https://pureboys.github.io/posts/jump-server/</link>
+      <pubDate>Mon, 22 Jun 2020 09:37:33 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/posts/jump-server/</guid>
+      <description>一步登陆 jumpserver 跳板机 告别Google的身份验证器</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://pureboys.github.io/about/</link>
+      <pubDate>Mon, 22 Jun 2020 09:33:55 +0800</pubDate>
+      
+      <guid>https://pureboys.github.io/about/</guid>
+      <description>Hello pureboys これは私のblogです</description>
+    </item>
+    
+  </channel>
+</rss>

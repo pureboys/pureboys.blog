@@ -38,7 +38,7 @@
     <meta property="og:image:width" content="2048">
     <meta property="og:image:height" content="1024">
     
-    <meta property="article:published_time" content="2020-06-22 10:18:26 &#43;0800 CST" />
+    <meta property="article:published_time" content="2020-10-20 10:18:26 &#43;0800 CST" />
     
 
     
@@ -133,13 +133,13 @@
                                     href="https://pureboys.github.io/posts/docker-kafka/">使用Docker-compose快速搭建Kafka开发环境</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2020-06-22" class="no-wrap"
-                                    title="Created at 2020/06/22">
-                                    2020-06-22</time-ago>
+                                Created <time-ago datetime="2020-10-20" class="no-wrap"
+                                    title="Created at 2020/10/20">
+                                    2020-10-20</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modified <time-ago datetime="2020-06-22" class="no-wrap"
-                                    title="Modified  at 2020/06/22">
-                                    2020-06-22</time-ago>
+                                Modified <time-ago datetime="2020-10-20" class="no-wrap"
+                                    title="Modified  at 2020/10/20">
+                                    2020-10-20</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -154,7 +154,7 @@
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                264 Words
+                                357 Words
                                 
                             </div>
                         </div>
@@ -163,37 +163,62 @@
                             <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h3 id="安装">安装</h3>
 <p>创建 docker_kafka 的目录
 参考官方测试用的docker-compose.yml直接在自定义的目录位置新建docker-compose的配置文件</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;2.1&#39;</span>
-<span style="color:#f92672">services</span>:
-<span style="color:#f92672">zookeeper</span>:
-   <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wurstmeister/zookeeper</span>
-   <span style="color:#f92672">ports</span>:
-   - <span style="color:#e6db74">&#34;2181&#34;</span>
-<span style="color:#f92672">kafka</span>:
-   <span style="color:#f92672">image</span>: <span style="color:#ae81ff">wurstmeister/kafka</span>
-   <span style="color:#f92672">ports</span>:
-   - <span style="color:#ae81ff">9092</span>:<span style="color:#ae81ff">9092</span>
-   <span style="color:#f92672">depends_on</span>:
-   - <span style="color:#e6db74">&#34;zookeeper&#34;</span>
-   <span style="color:#f92672">environment</span>:
-   <span style="color:#f92672">KAFKA_ADVERTISED_HOST_NAME</span>:  <span style="color:#ae81ff">172.26.201.4</span>
-   <span style="color:#f92672">KAFKA_ZOOKEEPER_CONNECT</span>: <span style="color:#ae81ff">zookeeper:2181</span>
-   <span style="color:#f92672">volumes</span>:
-   - <span style="color:#ae81ff">/var/run/docker.sock:/var/run/docker.sock</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
+<span style="color:#66d9ef">services</span>:
+	<span style="color:#66d9ef">zookeeper</span>:
+    <span style="color:#66d9ef">container_name</span>: zookeeper
+    <span style="color:#66d9ef">image</span>: wurstmeister/zookeeper
+
+  <span style="color:#66d9ef">kafka</span>:
+    <span style="color:#66d9ef">container_name</span>: kafka
+    <span style="color:#66d9ef">image</span>: wurstmeister/kafka
+    <span style="color:#66d9ef">ports</span>:
+      - <span style="color:#ae81ff">9092</span>:<span style="color:#ae81ff">9092</span>
+    <span style="color:#66d9ef">depends_on</span>:
+      - <span style="color:#e6db74">&#34;zookeeper&#34;</span>
+    <span style="color:#66d9ef">environment</span>:
+      <span style="color:#66d9ef">KAFKA_ADVERTISED_HOST_NAME</span>: kafka
+      <span style="color:#66d9ef">KAFKA_ZOOKEEPER_CONNECT</span>: zookeeper:<span style="color:#ae81ff">2181</span>
+
+  <span style="color:#66d9ef">kafka-manager</span>:
+    <span style="color:#66d9ef">container_name</span>: kafka-manager
+    <span style="color:#66d9ef">image</span>: hlebalbau/kafka-manager
+    <span style="color:#66d9ef">ports</span>:
+      - <span style="color:#ae81ff">9020</span>:<span style="color:#ae81ff">9000</span>
+    <span style="color:#66d9ef">environment</span>:
+      <span style="color:#66d9ef">ZK_HOSTS</span>: zookeeper:<span style="color:#ae81ff">2181</span>
 </code></pre></div><p>注意： KAFKA_ADVERTISED_HOST_NAME 需要配置为宿主机的ip
 docker-compose 启动kafka</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@ubuntu:~/docker/kafka# docker-compose up -d
 </code></pre></div><h3 id="验证">验证</h3>
-<p>首先进入到一个kafka容器中，例如: kafka_kafka_1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@ubuntu:~/docker/kafka# docker exec -it docker_kafka_kafka_1 /bin/bash
+<p>首先进入到一个kafka容器中，例如: kafka</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@ubuntu:~/docker/kafka# docker exec -it kafka /bin/bash
 </code></pre></div><p>创建一个topic并查看，需要指定zookeeper的容器名(这里是docker_kafka_kafka_1)，topic的名字为test</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$KAFKA_HOME/bin/kafka-topics.sh --create --topic test --zookeeper docker_kafka_zookeeper_1:2181 --replication-factor <span style="color:#ae81ff">1</span> --partitions <span style="color:#ae81ff">1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$KAFKA_HOME/bin/kafka-topics.sh --create --topic test --zookeeper zookeeper:2181 --replication-factor <span style="color:#ae81ff">1</span> --partitions <span style="color:#ae81ff">1</span>
 
-$KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper docker_kafka_zookeeper_1:2181 
+$KAFKA_HOME/bin/kafka-topics.sh --list --zookeeper zookeeper:2181 
 </code></pre></div><p>发布消息，输入几条消息后，按^C退出发布</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$KAFKA_HOME/bin/kafka-console-producer.sh --topic<span style="color:#f92672">=</span>test --broker-list docker_kafka_kafka_1:9092
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$KAFKA_HOME/bin/kafka-console-producer.sh --topic<span style="color:#f92672">=</span>test --broker-list kafka:9092
 </code></pre></div><p>接受消息</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server docker_kafka_kafka_1:9092 --from-beginning --topic test
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server kafka:9092 --from-beginning --topic test
+</code></pre></div><h3 id="kafka-manager-添加数据问题">kafka-manager 添加数据问题</h3>
+<p><code>Yikes! KeeperErrorCode = Unimplemented for /Kafka-Manager/mutex Try Again</code> CMAK添加集群的时候报错</p>
+<p>参考网址 <a href="https://github.com/yahoo/CMAK/issues/731">https://github.com/yahoo/CMAK/issues/731</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">my docker image version
+zookeeper:3.4.14
+wurstmeister/kafka:2.12-2.4.1
+kafkamanager/kafka-manager:3.0.0.4
+this worked <span style="color:#66d9ef">for</span> me
+➜ docker exec -it zookeeper bash
+root@98747a9eac65:/zookeeper-3.4.14# ./bin/zkCli.sh
+<span style="color:#f92672">[</span>zk: localhost:2181<span style="color:#f92672">(</span>CONNECTED<span style="color:#f92672">)</span> 2<span style="color:#f92672">]</span> ls /kafka-manager
+<span style="color:#f92672">[</span>configs, deleteClusters, clusters<span style="color:#f92672">]</span>
+<span style="color:#f92672">[</span>zk: localhost:2181<span style="color:#f92672">(</span>CONNECTED<span style="color:#f92672">)</span> 3<span style="color:#f92672">]</span> create /kafka-manager/mutex <span style="color:#e6db74">&#34;&#34;</span>
+Created /kafka-manager/mutex
+<span style="color:#f92672">[</span>zk: localhost:2181<span style="color:#f92672">(</span>CONNECTED<span style="color:#f92672">)</span> 5<span style="color:#f92672">]</span> create /kafka-manager/mutex/locks <span style="color:#e6db74">&#34;&#34;</span>
+Created /kafka-manager/mutex/locks
+<span style="color:#f92672">[</span>zk: localhost:2181<span style="color:#f92672">(</span>CONNECTED<span style="color:#f92672">)</span> 6<span style="color:#f92672">]</span> create /kafka-manager/mutex/leases <span style="color:#e6db74">&#34;&#34;</span>
+Created /kafka-manager/mutex/leases
 </code></pre></div></article>
                         </div>
                     </div>

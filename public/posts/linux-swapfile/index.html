@@ -270,11 +270,11 @@ $ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</sp
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/var/swapfile			swap			swap	defaults <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
 </code></pre></div><p>添加之后我的完整fstab文件如下，自行参考：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># /etc/fstab: static file system information.</span>
-<span style="color:#75715e">#</span>
+#
 <span style="color:#75715e"># Use &#39;blkid&#39; to print the universally unique identifier for a device; this may</span>
 <span style="color:#75715e"># be used with UUID= as a more robust way to name devices that works even if</span>
 <span style="color:#75715e"># disks are added and removed. See fstab(5).</span>
-<span style="color:#75715e">#</span>
+#
 <span style="color:#75715e"># &lt;file system&gt;             &lt;mount point&gt;  &lt;type&gt;  &lt;options&gt;  &lt;dump&gt;  &lt;pass&gt;</span>
 /var/swapfile			swap			swap	defaults <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
 /dev/sdb3			/home/guqing/guqing	ext4	defaults <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>

@@ -8,7 +8,7 @@ install:
 script: hugo
 deploy:
     provider: pages
-    skip_cleanup: false
+    skip_cleanup: true
     github_token: $token
     on:
         branch: master

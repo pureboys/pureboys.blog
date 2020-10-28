@@ -58,13 +58,14 @@ func init() {
 }
 
 func main() {
+	// 第一次可以使用非稳定排序
 	sort.Sort(studentSort{students, func(x, y *Student) bool {
 		if x.name != y.name {
 			return x.name < y.name
 		}
 		return false
 	}})
-
+	// 第二次之后就需要使用稳定排序，不然之前的排序又会被打乱
 	sort.Stable(studentSort{students, func(x, y *Student) bool {
 		if x.score != y.score {
 			return x.score > y.score
@@ -85,3 +86,6 @@ func main() {
 
 ### 结果
 首先根据年龄升序排序，然后根据成绩降序排序，最后根据名称升序排序
+
+### 参考
+https://blog.51cto.com/steed/2390923

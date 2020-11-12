@@ -1,6 +1,6 @@
 ---
-title: "idea 干净卸载"
-summary: "idea 干净卸载"
+title: "idea 干净卸载以及配置文件所在位置"
+summary: "idea 干净卸载以及配置文件所在位置"
 date: 2020-09-12T17:05:54+08:00
 categories: ["tech"]
 ---
@@ -20,4 +20,9 @@ categories: ["tech"]
 ## 引用
 
 https://www.jetbrains.com/help/idea/uninstall.html?section=macOS#standalone
+
+## 更多配置文件的位置
+
+https://www.jetbrains.com/help/idea/tuning-the-ide.html#configure-platform-properties
+
 

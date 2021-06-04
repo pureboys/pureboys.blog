@@ -6,4 +6,4 @@ draft: false
 
 ### Hello pureboys
 
-これは私のblogです
+这个是我的个人博客

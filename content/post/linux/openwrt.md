@@ -2,7 +2,7 @@
 title: "Openwrt 命令行配置上网并安装web界面"
 summary: "Openwrt命令行配置上网并安装web界面"
 date: 2020-09-06T19:12:53+08:00
-categories: ["tech"]
+categories: ["linux"]
 ---
 
 ###  Openwrt 命令行配置上网并安装web界面

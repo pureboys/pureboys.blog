@@ -2,7 +2,7 @@
 title: "golang的定时器NewTimer、NewTicker使用"
 summary: "golang的定时器NewTimer、NewTicker使用"
 date: 2020-10-27T14:15:02+08:00
-categories: ["tech"]
+categories: ["golang"]
 ---
 
 

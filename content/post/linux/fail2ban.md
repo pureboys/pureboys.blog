@@ -2,7 +2,7 @@
 title: "fail2ban 保护ss "
 summary: "防止扫描、破解"
 date: 2020-12-24T11:12:53+08:00
-categories: ["tech"]
+categories: ["linux"]
 ---
 
 ### 前略

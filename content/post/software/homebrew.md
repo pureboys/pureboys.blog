@@ -2,7 +2,7 @@
 title: "更换Homebrew源"
 date: 2020-07-10T16:46:19+08:00
 summary: "更换Homebrew源"
-categories: ["tech"]
+categories: ["software"]
 ---
 
 ### 使用以下命令更换国内阿里云上的homebrew镜像：

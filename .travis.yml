@@ -11,7 +11,7 @@ script: hugo
 deploy:
     provider: pages
     skip_cleanup: true
-    github_token: $token
+    github_token: $GITHUB_TOKEN
     on:
         branch: master
     local_dir: public
